@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Island+Moments&family=Halant&family=Instrument+Sans&display=swap');
+
+
+.about-team {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 80px 8%;
+  height:100vh;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+/* LEFT SIDE */
+.about-left {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+/* ==== NOTE SECTION ==== */
+.note-container {
+  position: relative;
+  width: 380px;
+  background-color: #fffbd7; /* base color */
+  background-image: url("../assets/images/Note.png");
+  background-size: cover;
+  background-blend-mode: multiply; /* blend color & texture */
+  padding: 30px 25px;
+  transform: rotate(-10deg) translate(40px, -20px);
+  border-radius: 8px;
+  box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Clip moved to top-right corner */
+.note-clip {
+  position: absolute;
+  top: -10px;  /* slightly above the note */
+  right: 2px; /* aligned toward right edge */
+  transform: rotate(8deg); /* small tilt for realism */
+  width: 55px;
+  z-index: 2;
+}
+
+.note-text {
+  position: relative;
+  font-family: "Halant", serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #0F3255;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+/* ==== INDIA GATE ==== */
+.india-gate {
+  width: 300px; /* made larger */
+  margin-top: -20px; /* slight upward adjustment */
+  transform: translateX(-200px); /* move left */
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2));
+  transition: all 0.3s ease; /* smooth reposition for responsiveness */
+}
+
+/* ==== LEFT LABEL + ARROW ==== */
+.arrow-left {
+  position: absolute;
+  left: 540px;   /* moved more towards right */
+  bottom: 200px;
+  width: 140px;
+}
+
+.arrow-label-left {
+  position: absolute;
+  left: 470px;   /* moved label closer to the image */
+  bottom: 150px;
+  font-family: "Island Moments", cursive;
+  font-size: 32px;
+  width:100%;
+  color: #103255;
+}
+
+
+/* RIGHT SIDE */
+.about-right {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centers vertically */
+  align-items: center;     /* centers horizontally */
+  height: 100vh;            /* take full screen height for proper centering */
+  margin-top: 0;    
+}
+
+.team-people {
+  width: 430px;
+  margin-bottom: 50px;
+}
+
+
+.arrow-right {
+  position: absolute;
+  right: -10px;
+  top: 15%;
+  width: 75px;
+}
+
+.arrow-label-right {
+  position: absolute;
+  right: -70px;
+  top: 10%;
+  font-family: "Island Moments", cursive;
+  font-size: 32px;
+  color: #103255;
+}
+
+.arrow-bottom {
+  position: absolute;
+  bottom: 580px;
+  right: 330px;
+  width: 100px;
+}
+
+.arrow-label-top {
+  position: absolute;
+  bottom: 650px;
+  right: 310px;
+  transform: translateX(-50%);
+  font-family: "Island Moments", cursive;
+  font-size: 32px;
+  color: #103255;
+}
+
+
+/* DESCRIPTION + BUTTON */
+.about-desc {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.about-desc p {
+  font-family: "Halant", serif;
+  font-size: 25px;
+  color: #252729;
+}
+
+.portfolio-btn {
+  background-color: #F15D2B;
+  color: white;
+  font-family: "Instrument Sans", sans-serif;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 25px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.portfolio-btn:hover {
+  background-color: #b95428;
+}

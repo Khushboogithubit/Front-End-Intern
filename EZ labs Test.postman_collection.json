@@ -1,0 +1,41 @@
+{
+	"info": {
+		"_postman_id": "6c961c35-23b6-48c2-a210-bf832ae42d05",
+		"name": "EZ labs Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37446272"
+	},
+	"item": [
+		{
+			"name": "EZ labs Contact API",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Khushboo Jain\",\r\n  \"email\": \"jainkhushboojain04@gmail.com\",\r\n  \"phone\": \"8218467643\",\r\n  \"message\": \"Hello! This is a test message from my React form.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://vernanbackend.ezlab.in/api/contact-us/",
+					"protocol": "https",
+					"host": [
+						"vernanbackend",
+						"ezlab",
+						"in"
+					],
+					"path": [
+						"api",
+						"contact-us",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

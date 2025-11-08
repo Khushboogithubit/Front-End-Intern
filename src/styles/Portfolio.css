@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Halant:wght@400&family=Instrument+Sans:wght@400&display=swap");
+
+/* ======= PORTFOLIO SECTION ======= */
+.portfolio {
+  position: relative;
+  /* background: radial-gradient(circle, #e2e2e2 0%, #fefefe 50%, #e8e8e8 100%); */
+  color: #000;
+  text-align: center;
+  padding: 80px 8%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  /* border: 6px solid #000; */
+}
+
+/* ======= DECORATIVE SIDES ======= */
+.decor-left {
+  position: absolute;
+  left: 8%;
+  bottom: 20%;
+  width: 150px;
+  height: 450px;
+  background: url("../assets/images/camera.png") no-repeat center/contain;
+}
+
+.decor-right {
+  position: absolute;
+  right: -60px;        /* same inward shift for alignment */
+  bottom: -120px;      /* raised slightly */
+  width: 480px;        /* slightly larger to meet top */
+  height: 500px;
+  background: url("../assets/images/bottom.png") no-repeat center/contain;
+  transform: rotate(-85deg); /* minor adjustment for smoother curve */
+  z-index: 0;
+}
+
+/* ======= TEXT CONTENT ======= */
+.portfolio-heading {
+  font-family: "Halant", serif;
+  font-weight: 400;
+  font-size: 2.3rem;
+  color: #111;
+}
+
+.portfolio-subtext {
+  font-family: "Instrument Sans", sans-serif;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+/* ======= FILM FRAME ======= */
+.film-frame {
+  position: relative;
+  display: inline-block;
+  background: #fff;
+  border: 6px solid #000;
+  border-radius: 8px;
+  padding: 10px 0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ======= FILM STRIP BOXES ======= */
+.film-strip {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.film-box {
+  width: 30px;
+  height: 25px;
+  border: 2px solid #000;
+  border-radius: 2px;
+}
+
+/* ======= VIDEO AREA ======= */
+.film-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+  padding: 10px 20px;
+  background: linear-gradient(180deg, #fff 0%, #f7f7f7 100%);
+}
+
+.video-wrapper {
+  width: 560px;
+  height: 315px;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ======= ARROWS ======= */
+.arrow {
+  width: 60px;
+  height: 60px;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  user-select: none;
+}
+
+.arrow img {
+  width: 50px;
+  height: 50px;
+  filter: invert(0); /* ensures black arrow */
+}
+
+.arrow:hover {
+  transform: scale(1.1);
+}
+
+.arrow-left img {
+  transform: rotate(180deg); /* ✅ flip left arrow */
+}
+
+/* ======= RESPONSIVE ======= */
+@media (max-width: 768px) {
+  .video-wrapper {
+    width: 90vw;
+    height: 50vw;
+  }
+
+  .arrow {
+    width: 40px;
+    height: 40px;
+  }
+
+  .arrow img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .film-box {
+    width: 20px;
+    height: 18px;
+  }
+
+  .portfolio-heading {
+    font-size: 1.8rem;
+  }
+}

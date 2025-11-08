@@ -1,15 +1,14 @@
 import React, { useState } from "react";
-import Logo from "../assets/logo.png";
+import "../styles/Contact.css";
 
 const Contact = () => {
-  const [open, setOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
     message: "",
   });
-  const [status, setStatus] = useState(""); // success/error message
+  const [status, setStatus] = useState("");
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -23,7 +22,6 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Front-end validation
     if (!formData.name || !formData.email || !formData.message) {
       setStatus("Please fill all required fields!");
       return;
@@ -54,39 +52,10 @@ const Contact = () => {
   };
 
   return (
-    <>
-      <header className="navbar">
-        <div className="logo">
-          <img
-            src={Logo}
-            alt="Logo"
-            className="w-[50px] h-[20px] md:w-[70px] md:h-[28px] object-contain"
-          />
-        </div>
-
-        <div
-          className={`menu-toggle md:hidden ${open ? "open" : ""}`}
-          onClick={() => setOpen(!open)}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </header>
-
-      <nav className={`overlay md:hidden ${open ? "show" : ""}`}>
-        <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Work</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-
-      <section className="contact-section">
-        <div className="decor-top-right"></div>
-        <div className="decor-bottom-left"></div>
-        <div className="content">
+    <section className="contact-section">
+      <div className="decor-top-right"></div>
+      <div className="decor-bottom-left"></div>
+      <div className="content">
         <div className="contact-left">
           <p>
             Whether you have an idea, a question, or simply want to explore how V can work together, 
@@ -141,9 +110,8 @@ const Contact = () => {
             <span>+91 98736 84567</span>
           </div>
         </div>
-    </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
 

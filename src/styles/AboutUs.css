@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Halant:wght@400;600&family=Island+Moments&family=Instrument+Sans:wght@400&display=swap');
+
+.aboutus {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 8%;
+  /* background: #fdf4ed; */
+  height: 100vh;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+/* LEFT SIDE */
+.aboutus-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 25px;
+}
+
+.aboutus-heading {
+  font-family: "Halant", serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: #252729;
+}
+
+.aboutus-subtext {
+  font-family: "Instrument Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.3;
+  color: #333;
+  max-width: 420px;
+}
+
+.aboutus-stats {
+  display: flex;
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.note {
+  background: url("../assets/images/Note.png");
+  background-size: cover;
+  background-color: #fffbd7;
+  background-blend-mode: multiply;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  width: 130px;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(-5deg);
+  transition: transform 0.3s ease;
+}
+
+.note:hover {
+  transform: rotate(0deg) scale(1.05);
+}
+
+.note h3 {
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 38px;
+  color: #103255;
+  font-weight: 500;
+}
+
+.note p {
+  font-family: "Instrument Sans", sans-serif;
+  color: #F15D2B;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.note2 { transform: rotate(3deg); }
+.note3 { transform: rotate(-2deg); }
+
+/* RIGHT SIDE */
+.aboutus-right {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: center;
+  height: 100%;
+}
+
+.quote {
+  font-family: "Island Moments", cursive;
+  font-size: 44px;
+  color: #0f3255;
+  text-align: center;
+  max-width: 500px;
+  position: absolute;
+  top: 15%; /* ✅ slightly above center */
+  left: 15%;
+  /* transform: translateX(-50%); */
+  margin: 0;
+  z-index: 3;
+}
+
+/* ✅ Single semicircle logo image */
+.logo-arc {
+  position: absolute;
+  bottom: 0%; /* ✅ above the mountain */
+  left: 50%;
+  transform: translateX(-46%);
+  width: 100%;
+  max-width: 600px;
+  z-index: 3;
+}
+
+/* ✅ Mountain touching bottom */
+.mountain-img {
+  width: 80%;
+  max-width: 420px;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .aboutus-right {
+    width: 100%;
+  }
+
+  .quote {
+    font-size: 36px;
+    top: 14%;
+  }
+
+  .logo-arc {
+    bottom: 150px;
+    width: 85%;
+  }
+
+  .mountain-img {
+    width: 90%;
+  }
+}
