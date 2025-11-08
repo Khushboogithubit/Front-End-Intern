@@ -5,7 +5,6 @@ import arrowImg from "../assets/images/leftarrow.png";
 const Portfolio = () => {
   return (
     <section className="portfolio">
-      {/* Decorative Sides */}
       <div className="decor-left"></div>
       <div className="decor-right"></div>
 
@@ -17,11 +16,11 @@ const Portfolio = () => {
           {/* Top Film Strip */}
           <div className="film-strip top-strip">
             {Array.from({ length: 12 }).map((_, i) => (
-              <div className="film-box" key={i}></div>
+              <div className="film-box" key={`top-${i}`}></div>
             ))}
           </div>
 
-          {/* Video + Arrows */}
+          {/* Middle Section (Video + Arrows) */}
           <div className="film-inner">
             <div className="arrow arrow-left">
               <img src={arrowImg} alt="Previous" />
@@ -46,7 +45,7 @@ const Portfolio = () => {
           {/* Bottom Film Strip */}
           <div className="film-strip bottom-strip">
             {Array.from({ length: 12 }).map((_, i) => (
-              <div className="film-box" key={i}></div>
+              <div className="film-box" key={`bottom-${i}`}></div>
             ))}
           </div>
         </div>

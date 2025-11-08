@@ -3,7 +3,6 @@
 /* ======= PORTFOLIO SECTION ======= */
 .portfolio {
   position: relative;
-  /* background: radial-gradient(circle, #e2e2e2 0%, #fefefe 50%, #e8e8e8 100%); */
   color: #000;
   text-align: center;
   padding: 80px 8%;
@@ -12,7 +11,6 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  /* border: 6px solid #000; */
 }
 
 /* ======= DECORATIVE SIDES ======= */
@@ -27,16 +25,15 @@
 
 .decor-right {
   position: absolute;
-  right: -60px;        /* same inward shift for alignment */
-  bottom: -120px;      /* raised slightly */
-  width: 480px;        /* slightly larger to meet top */
-  height: 500px;
+  right: -3%;
+  bottom: 0%;
+  width: 400px;
+  height: 400px;
   background: url("../assets/images/bottom.png") no-repeat center/contain;
-  transform: rotate(-85deg); /* minor adjustment for smoother curve */
-  z-index: 0;
+  transform: rotate(-90deg);
 }
 
-/* ======= TEXT CONTENT ======= */
+/* ======= TEXT ======= */
 .portfolio-heading {
   font-family: "Halant", serif;
   font-weight: 400;
@@ -54,44 +51,58 @@
 .film-frame {
   position: relative;
   display: inline-block;
-  background: #fff;
-  border: 6px solid #000;
-  border-radius: 8px;
-  padding: 10px 0;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  background: radial-gradient(
+    62.03% 164.17% at 50% 50%,
+    #000000 0%,
+    rgba(37, 39, 41, 0.5) 50%,
+    rgba(129, 136, 143, 0) 100%
+  );
+  border-radius: 0;
+  padding: 0;
 }
 
-/* ======= FILM STRIP BOXES ======= */
+/* ======= FILM STRIPS ======= */
 .film-strip {
   display: flex;
-  justify-content: space-between;
-  padding: 0 10px;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 6px 10px;
+  gap: 6px;
 }
 
+.bottom-strip {
+  border-bottom: none;
+}
+
+/* ======= FILM BOXES ======= */
 .film-box {
-  width: 30px;
-  height: 25px;
-  border: 2px solid #000;
-  border-radius: 2px;
+  width: 40px;
+  height: 45px;
+  background: url(../assets/images/BG.png) 250%;
+
+  border: 2px solid transparent;
+  border-radius: 8px;
 }
 
-/* ======= VIDEO AREA ======= */
+/* ======= MIDDLE (VIDEO + ARROWS) ======= */
 .film-inner {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 10px 0;
-  padding: 10px 20px;
-  background: linear-gradient(180deg, #fff 0%, #f7f7f7 100%);
+  padding: 5px;
 }
-
+.arrow-right{
+  right: 9px;
+}
+/* Video wrapper centered */
 .video-wrapper {
-  width: 560px;
-  height: 315px;
+  position: relative;
+  width: 452px;
+  height: 270px;
+  border-radius: 8px;
   overflow: hidden;
-  border-radius: 6px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  background: transparent;
 }
 
 .video-wrapper iframe {
@@ -102,30 +113,34 @@
 
 /* ======= ARROWS ======= */
 .arrow {
-  width: 60px;
-  height: 60px;
-  background: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 270px;
+  background: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: transform 0.3s ease;
-  user-select: none;
+  border-radius: 0;
+  transition: all 0.3s ease;
 }
-
 .arrow img {
-  width: 50px;
-  height: 50px;
-  filter: invert(0); /* ensures black arrow */
+  width: 25px;
+  height: 75px;
+  filter: brightness(0);
+  transition: transform 0.3s ease;
 }
 
-.arrow:hover {
-  transform: scale(1.1);
+.arrow-left {
+  left: 9px;
 }
-
+/* Flip left arrow correctly */
 .arrow-left img {
-  transform: rotate(180deg); /* ✅ flip left arrow */
+  transform: rotate(180deg);
 }
+
 
 /* ======= RESPONSIVE ======= */
 @media (max-width: 768px) {
@@ -134,19 +149,19 @@
     height: 50vw;
   }
 
+  .film-box {
+    width: 25px;
+    height: 20px;
+  }
+
   .arrow {
     width: 40px;
     height: 40px;
   }
 
   .arrow img {
-    width: 35px;
-    height: 35px;
-  }
-
-  .film-box {
-    width: 20px;
-    height: 18px;
+    width: 24px;
+    height: 24px;
   }
 
   .portfolio-heading {
