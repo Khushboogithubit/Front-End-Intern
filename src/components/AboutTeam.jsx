@@ -29,8 +29,11 @@ const AboutTeam = () => {
           </div>
         </div>
         <img src={IndiaGate} alt="India Gate" className="india-gate" />
-        <p className="arrow-label-left">Branding Experts</p>
-        <img src={ArrowLeft} alt="Arrow Left" className="arrow-left" />
+        <div className="arrow-left-container">
+          <img src={ArrowLeft} alt="Arrow Left" className="arrow-left" />
+          <p className="arrow-label-left">Branding Experts</p>
+          
+        </div>
       </div>
 
       <div className="about-right">

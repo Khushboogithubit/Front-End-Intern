@@ -67,23 +67,28 @@
 }
 
 /* ==== LEFT LABEL + ARROW ==== */
-.arrow-left {
+.arrow-left-container {
   position: absolute;
-  left: 540px;   /* moved more towards right */
-  bottom: 200px;
-  width: 140px;
+  left: 470px;
+  bottom: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  gap: 5px;  
+}
+
+.arrow-left {
+  width: 90px;  
+  left: 80%; 
+  transform: rotate(15deg)  translateX(30px); 
 }
 
 .arrow-label-left {
-  position: absolute;
-  left: 470px;   /* moved label closer to the image */
-  bottom: 150px;
   font-family: "Island Moments", cursive;
   font-size: 32px;
-  width:100%;
   color: #103255;
+  text-align: center;
 }
-
 
 /* RIGHT SIDE */
 .about-right {
