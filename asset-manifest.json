@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Front-End-Intern/static/css/main.ad7d37eb.css",
+    "main.js": "/Front-End-Intern/static/js/main.b7193568.js",
+    "static/media/BG.png": "/Front-End-Intern/static/media/BG.5de035595f3fbc5e67ec.png",
+    "static/media/Hero Mandala.png": "/Front-End-Intern/static/media/Hero Mandala.16c2fba6a8d142bf10f9.png",
+    "static/media/bottom.png": "/Front-End-Intern/static/media/bottom.6373c1c1c73b41c7a554.png",
+    "static/media/top.png": "/Front-End-Intern/static/media/top.5f2b24c047356acff832.png",
+    "static/media/Note.png": "/Front-End-Intern/static/media/Note.724b613f9e3ef19e9bd4.png",
+    "static/media/Mountain.png": "/Front-End-Intern/static/media/Mountain.45e4ff5c8c80f5bff4a1.png",
+    "static/media/camera.png": "/Front-End-Intern/static/media/camera.92319ba8494a4a637b50.png",
+    "static/media/TeamPeople.png": "/Front-End-Intern/static/media/TeamPeople.4788f6913bd99bac667b.png",
+    "static/media/LogoArc.png": "/Front-End-Intern/static/media/LogoArc.232bf3fdb361d76aef0f.png",
+    "static/media/IndiaGate.png": "/Front-End-Intern/static/media/IndiaGate.570322b93594303814af.png",
+    "index.html": "/Front-End-Intern/index.html",
+    "main.ad7d37eb.css.map": "/Front-End-Intern/static/css/main.ad7d37eb.css.map",
+    "main.b7193568.js.map": "/Front-End-Intern/static/js/main.b7193568.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ad7d37eb.css",
+    "static/js/main.b7193568.js"
+  ]
+}
